@@ -8,6 +8,8 @@ def calcPossibleDistances(time):
     return possibleDistances
 
 
+###### MAIN #######
+
 file1 = open(r'C:\WorkSpace\aoc2023\input6.txt', 'r')
 Lines = file1.readlines()
 
@@ -23,7 +25,7 @@ for count, line in enumerate(Lines):
 
 for race, time in enumerate(times):
     racesWon = 0
-    #print(f"time: {time} distance: {recordDistances[race]}")
+    #print(f"time: {time} distance: {recordDistances[race]}")    
     possibleDistances = calcPossibleDistances(time)
     for r in possibleDistances:
         if int(r) > int(recordDistances[race]):
